@@ -1,7 +1,7 @@
 package com.test.framework;
 
-import com.test.tank.FaceDir;
-import com.test.tank.RoleType;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.state.RoleTypeEnum;
 import com.test.tank.enemy.SuperFireBullet;
 import com.test.tank.team.BulletPeace;
 import com.test.tank.team.TeamTank;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @author wulei19922@gmail.com
  * create:2020/7/15
  **/
-public class TeamFactory extends GameFactory {
+public   class TeamFactory extends GameFactory {
 
 
  
@@ -29,15 +29,22 @@ public class TeamFactory extends GameFactory {
     @Override
     public AbstrackTank createTank(int x, int y, int width, int height, FaceDir faceDir) {
         
-        return new TeamTank(new ArrayList<>(),"teamtak", RoleType.TEAMER,x,y,width,height,faceDir);
+        return new TeamTank("teamtak", RoleTypeEnum.TEAMER,x,y,width,height,faceDir);
+    }
+
+    
+    
+    @Override
+    public AbstrackBarrier createBarrier(int x, int y, int width, int height, FaceDir faceDir) {
+        return null;
     }
 
 
-//    @Override
-    public AbstracBullet createBullet(int x, int y, int width, int height, FaceDir faceDir, int length, int speed,int  type) {
+    //    @Override
+    public AbstracBullet createBullet(String name ,int x, int y, int width, int height, FaceDir faceDir, int length, int speed,int  type) {
 
         //超级子弹
-        return new SuperFireBullet(x,y,width,height,faceDir,length,speed);
+        return new SuperFireBullet(name,x,y,width,height,faceDir,length,speed);
     }
     
 }

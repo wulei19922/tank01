@@ -20,6 +20,10 @@ public class TankResource {
     static String BU_LEFT=BASE_PATH+"bullet_l.gif";
     static String BU_RIGHT=BASE_PATH+"bullet_r.gif";
     static String TBU_UP=BASE_PATH+"bullet_u.gif";
+    static String WALL=BASE_PATH+"wall.gif";
+    
+    
+    
 
 
     

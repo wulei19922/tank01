@@ -1,4 +1,4 @@
-package com.test.tank;
+package com.test.tank.dir;
 
 /**
  * Desc:

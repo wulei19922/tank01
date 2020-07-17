@@ -14,7 +14,7 @@ import java.io.IOException;
 public class TankLoadRsourceCatch {
 
 
-    public static BufferedImage TK_L, TK_R, TK_U, TK_D,BL_L,BL_R,BL_U,BL_D,BOOM;
+    public static BufferedImage TK_L, TK_R, TK_U, TK_D,BL_L,BL_R,BL_U,BL_D,BOOM,WALL;
 
 
     static {
@@ -29,6 +29,8 @@ public class TankLoadRsourceCatch {
             BL_L = ImageIO.read(new File(TankResource.BU_LEFT));
             BL_R = ImageIO.read(new File(TankResource.BU_RIGHT));
             BOOM = ImageIO.read(new File(TankResource.BOOM));
+            WALL = ImageIO.read(new File(TankResource.WALL));
+            
         } catch (IOException e) {
             e.printStackTrace();
         }

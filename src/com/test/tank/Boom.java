@@ -1,6 +1,8 @@
 package com.test.tank;
 
 import com.test.res.TankLoadRsourceCatch;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.dir.MoveDir;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

@@ -1,12 +1,10 @@
 package com.test.framework;
 
 import com.test.res.TankLoadRsourceCatch;
-import com.test.tank.FaceDir;
-import com.test.tank.RoleType;
+import com.test.tank.dir.FaceDir;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.List;
 
 /**
  * Desc:
@@ -14,9 +12,9 @@ import java.util.List;
  * @author wulei19922@gmail.com
  * create:2020/7/15
  **/
-public  abstract  class AbstracBullet implements Collion {
+public  abstract  class AbstracBullet extends GameObject {
      
-     public  int x ,y,width,height,length,speed;
+     public  int length;
      public FaceDir faceDir;
 
 
@@ -31,29 +29,7 @@ public  abstract  class AbstracBullet implements Collion {
      }
      
      
-     
-     //是否击中
      @Override
-     public   boolean  check(AbstrackTank abstrackTank,AbstracBullet bu){
-
-
-          if (bu.x > abstrackTank.x && bu.x < abstrackTank.x + abstrackTank.width &&
-                  bu.y> abstrackTank.y && bu.y < abstrackTank.y + abstrackTank.height
-          ) {
-              
-              return  true;
-             
-
-          }else{
-               
-          return  false;
-          }
-          
-          
-          
-     };
-     
-
      public  void paint(Graphics g){
 
           length-=speed;

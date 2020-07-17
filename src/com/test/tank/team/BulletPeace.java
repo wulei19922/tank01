@@ -1,12 +1,10 @@
 package com.test.tank.team;
 
 import com.test.framework.AbstracBullet;
-import com.test.res.TankLoadRsourceCatch;
-import com.test.tank.FaceDir;
-import com.test.tank.MoveDir;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.dir.MoveDir;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 /**
  * Desc:

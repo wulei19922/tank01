@@ -15,7 +15,7 @@ public interface Collion {
      * @Date: 2020/7/16
      */
     
-    public   boolean  check(AbstrackTank abstrackTank,AbstracBullet bu);
+    public   boolean  checkCollsionWith(AbstrackTank abstrackTank,AbstracBullet bu);
     
     
 }

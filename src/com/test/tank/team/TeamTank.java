@@ -2,9 +2,9 @@ package com.test.tank.team;
 
 import com.test.framework.AbstracBullet;
 import com.test.framework.AbstrackTank;
-import com.test.tank.*;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.state.RoleTypeEnum;
 
-import java.awt.*;
 import java.util.List;
 
 /**
@@ -16,8 +16,9 @@ import java.util.List;
 public class TeamTank extends AbstrackTank {
 
 
-    public TeamTank(List<AbstracBullet> list, String tankName, RoleType roleType, int x, int y, int width, int height, FaceDir faceDir) {
-        super(list, tankName, roleType, x, y, width, height, faceDir);
+    
+    public TeamTank(String tankName, RoleTypeEnum roleTypeEnum, int x, int y, int width, int height, FaceDir faceDir) {
+        super(tankName, roleTypeEnum, x, y, width, height, faceDir);
     }
 }
     

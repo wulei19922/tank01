@@ -1,9 +1,9 @@
 package com.test.framework;
 
 import com.test.res.TankLoadRsourceCatch;
-import com.test.tank.FaceDir;
-import com.test.tank.RoleType;
-import com.test.tank.TankState;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.state.RoleTypeEnum;
+import com.test.tank.state.TankStateEnum;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -18,17 +18,13 @@ import java.util.List;
  **/
 
 
-public abstract  class AbstrackTank {
-    public  String tankName="";
-    public TankState tankState=TankState.LIFE;
-    public  RoleType roleType=RoleType.TEAMER;
-    public  List<AbstracBullet> list=new ArrayList<>();
-    public  FaceDir faceDir;
-    public  int  x,y,width,height,speed;
+public abstract  class AbstrackTank extends GameObject {
     
-    public AbstrackTank(List<AbstracBullet>list, String tankName, RoleType roleType,int x ,int y,int width,int height,FaceDir faceDir){
-        this.tankName=tankName;
-        this.roleType=roleType;
+    
+    public RoleTypeEnum roleTypeEnum = RoleTypeEnum.TEAMER;
+    public AbstrackTank(String tankName, RoleTypeEnum roleTypeEnum, int x , int y, int width, int height, FaceDir faceDir){
+        this.name=tankName;
+        this.roleTypeEnum = roleTypeEnum;
         this.x=x;
         this.y=y;
         this.width=width;
@@ -38,6 +34,7 @@ public abstract  class AbstrackTank {
     }
     
     
+    @Override
     public  void paint(Graphics graphics){
 
         BufferedImage bufferedImage=null;
@@ -50,8 +47,6 @@ public abstract  class AbstrackTank {
         }
         
         graphics.drawImage(bufferedImage,x,y,null);
-        
-        
         
     }
 

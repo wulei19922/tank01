@@ -1,8 +1,9 @@
 package com.test.tank.enemy;
 
 import com.test.framework.AbstracBullet;
+import com.test.framework.AbstrackTank;
 import com.test.res.TankLoadRsourceCatch;
-import com.test.tank.FaceDir;
+import com.test.tank.dir.FaceDir;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -16,8 +17,15 @@ import java.awt.image.BufferedImage;
 public class Bullet_02  extends AbstracBullet  {
 
 
+    
     public Bullet_02(int x, int y, int width, int height, FaceDir faceDir, int length, int speed) {
         super(x, y, width, height, faceDir, length, speed);
+    }
+
+
+    public Bullet_02(String name,int x, int y, int width, int height, FaceDir faceDir, int length, int speed) {
+        super(x, y, width, height, faceDir, length, speed);
+        this.name=name;
     }
 
     @Override
@@ -49,6 +57,6 @@ public class Bullet_02  extends AbstracBullet  {
 
 
     }
-    
-    
+
+
 }

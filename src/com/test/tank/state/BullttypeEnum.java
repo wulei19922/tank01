@@ -1,4 +1,4 @@
-package com.test.tank;
+package com.test.tank.state;
 
 /**
  * Desc:
@@ -6,6 +6,6 @@ package com.test.tank;
  * @author wulei19922@gmail.com
  * create:2020/7/15
  **/
-public class Bullttype {
+public class BullttypeEnum {
     
 }

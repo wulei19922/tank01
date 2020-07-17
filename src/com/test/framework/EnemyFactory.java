@@ -1,11 +1,9 @@
 package com.test.framework;
 
-import com.test.tank.FaceDir;
-import com.test.tank.RoleType;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.state.RoleTypeEnum;
 import com.test.tank.enemy.Bullet_02;
 import com.test.tank.enemy.RedTiggerTank;
-
-import java.awt.*;
 
 /**
  * Desc:
@@ -31,9 +29,14 @@ public class EnemyFactory extends  GameFactory {
         
         
         
-        return new RedTiggerTank(null,"red_tiger", RoleType.ENEMY,x,y,width,height,faceDir);
+        return new RedTiggerTank("red_tiger", RoleTypeEnum.ENEMY,x,y,width,height,faceDir);
+    }
+
+    
+    @Override
+    public AbstrackBarrier createBarrier(int x, int y, int width, int height, FaceDir faceDir) {
+        return null;
     }
 
 
-   
 }

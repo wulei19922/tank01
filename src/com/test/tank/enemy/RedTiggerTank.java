@@ -2,8 +2,8 @@ package com.test.tank.enemy;
 
 import com.test.framework.AbstracBullet;
 import com.test.framework.AbstrackTank;
-import com.test.tank.FaceDir;
-import com.test.tank.RoleType;
+import com.test.tank.dir.FaceDir;
+import com.test.tank.state.RoleTypeEnum;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class RedTiggerTank extends AbstrackTank {
 
 
-    public RedTiggerTank(List<AbstracBullet> list, String tankName, RoleType roleType, int x, int y, int width, int height, FaceDir faceDir) {
-        super(list, tankName, roleType, x, y, width, height, faceDir);
+    public RedTiggerTank(String tankName, RoleTypeEnum roleTypeEnum, int x, int y, int width, int height, FaceDir faceDir) {
+        super(tankName, roleTypeEnum, x, y, width, height, faceDir);
     }
 }
